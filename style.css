@@ -1,0 +1,844 @@
+body * {
+  color: #484848;
+}
+body > header {
+  height: 529px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 300px, rgba(0, 0, 0, 0) 100%), url('images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+body > header > .top {
+  flex: 0 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+body > header > .top > .logo {
+  flex: 0 0 auto;
+  font-size: 34px;
+  color: white;
+  font-weight: 600;
+  margin: 24px;
+}
+body > header > .top .search {
+  font-size: 0;
+  flex: 1;
+}
+body > header > .top .search > .search-input {
+  box-sizing: border-box;
+  width: 460px;
+  padding: 12px 4px 12px 12px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+body > header > .top .search > .search-input > svg {
+  flex: 0 0 auto;
+  margin: 0 10px 0 5px;
+}
+body > header > .top .search > .search-input > input {
+  flex: 1;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  outline: none;
+}
+body > header > .top .nav {
+  height: 80px;
+}
+body > header > .top .nav * {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 80px;
+}
+body > header > .top .nav > ul {
+  margin: 0;
+}
+body > header > .top .nav > ul > li {
+  list-style: none;
+  float: left;
+  padding: 0 12px;
+  color: #fff;
+  cursor: pointer;
+}
+body > header > .top .nav > ul > li:hover {
+  border-bottom: 2px solid #fff;
+}
+body > header .bottom {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+}
+body > header .bottom > .content {
+  width: 1032px;
+  margin: 0 auto;
+}
+body > header .bottom > .content > .top {
+  margin-top: 104px;
+}
+body > header .bottom > .content > .top > .title {
+  font-size: 32px;
+  color: white;
+  font-weight: 600;
+  line-height: 32px;
+  padding: 12px 0;
+  margin-bottom: 15px;
+  font-family: PingFang SC;
+}
+body > header .bottom > .content > .top > .button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 10px 22px;
+  color: #fff;
+  line-height: 24px;
+  margin-top: 3px;
+}
+body > header .bottom > .content > .top > .button > span {
+  line-height: 20px;
+  color: #fff;
+}
+body > header .bottom > .content > .search {
+  width: 1032px;
+  height: 70px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background-color: #fff;
+  border: solid 1px #ebebeb;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+body > header .bottom > .content > .search > * {
+  height: 100%;
+  border-right: 1px solid #ebebeb;
+}
+body > header .bottom > .content > .search > .select {
+  flex: 0 0 auto;
+  padding: 1px 6px 1px 24px;
+  width: 70px;
+}
+body > header .bottom > .content > .search > .select > svg {
+  font-size: 14px;
+  margin-left: 4px;
+}
+body > header .bottom > .content > .search > .select > a {
+  font-size: 18px;
+  line-height: 70px;
+  text-decoration: none;
+  color: #484848;
+  font-weight: 800;
+  font-family: Circular, "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body > header .bottom > .content > .search > .search-input {
+  display: flex;
+  flex: 1;
+  line-height: 70px;
+  align-items: center;
+  position: relative;
+}
+body > header .bottom > .content > .search > .search-input > svg {
+  margin-left: 14px;
+  color: #484848;
+}
+body > header .bottom > .content > .search > .search-input > input {
+  padding: 0 4px 0 12px;
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  height: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #484848;
+}
+body > header .bottom > .content > .search > .search-input > input:focus + .table {
+  display: block;
+}
+body > header .bottom > .content > .search > .search-input .table {
+  display: none;
+  z-index: 998;
+  position: absolute;
+  width: 932px;
+  box-sizing: border-box;
+  padding: 0px 40px;
+  background-color: #fff;
+  line-height: 1.375em;
+  top: 100%;
+  border-radius: 0 0 2px 2px;
+  box-shadow: rgba(26, 26, 29, 0.3) 0px 15px 46px -10px;
+}
+body > header .bottom > .content > .search > .search-input .table > .info {
+  color: #767676;
+  padding: 16px 0;
+  font-size: 12px;
+  border-bottom: 1px solid #ebebeb;
+}
+body > header .bottom > .content > .search > .search-input .table > .city-list {
+  margin: 16px 0 32px 0;
+  display: flex;
+}
+body > header .bottom > .content > .search > .search-input .table > .city-list > .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+body > header .bottom > .content > .search > .search-input .table > .city-list > .item > .title {
+  flex: 0 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+body > header .bottom > .content > .search > .search-input .table > .city-list > .item > .des {
+  flex: 1;
+  font-size: 0;
+}
+body > header .bottom > .content > .search > .search-input .table > .city-list > .item > .des > .city {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  width: 66px;
+  line-height: 1;
+  padding-top: 24px;
+}
+body > header .bottom > .content > .search .date {
+  width: 268px;
+  height: 70px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+body > header .bottom > .content > .search .date:focus {
+  width: calc(834px * 0.52);
+  outline: none;
+}
+body > header .bottom > .content > .search .date:focus > .date-table {
+  display: block;
+}
+body > header .bottom > .content > .search .date > * {
+  color: #484848;
+}
+body > header .bottom > .content > .search .date > svg {
+  flex: 0 0 auto;
+  margin: 0 8px;
+}
+body > header .bottom > .content > .search .date > a {
+  line-height: 25px;
+  flex: 1;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: Circular, "Hiragino Sans GB", "华文细黑", "STHeiti", "微软雅黑", "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body > header .bottom > .content > .search .date > .date-table {
+  display: none;
+  z-index: 999;
+  width: calc(100% + 96px);
+  height: 192px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #ebebeb;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 14px 36px 2px;
+}
+body > header .bottom > .content > .search > .search-button {
+  flex: 0 0 auto;
+  width: 96px;
+  line-height: 70px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+}
+body > header .bottom > .content > .search > .search-button > button {
+  background-color: #ff5a60;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  height: 48px;
+  padding: 1px 18px;
+  font-size: 16px;
+  line-height: 46px;
+  color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+body > section {
+  width: 1032px;
+  margin: 0 auto;
+}
+body > section > .listings > .top {
+  margin-bottom: 15px;
+}
+body > section > .listings > .top > .title {
+  margin-top: 32px;
+  margin-bottom: 4px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+  font-family: Cereal, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+body > section > .listings > .top > .desc {
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
+  font-family: Cereal, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+body > section > .listings > .ListingsView {
+  margin-bottom: 40px;
+}
+body > section > .listings > .ListingsView > .cityList {
+  padding: 16px 8px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  position: relative;
+}
+body > section > .listings > .ListingsView > .cityList > .city {
+  overflow: hidden;
+}
+body > section > .listings > .ListingsView > .cityList > .city > button {
+  margin-right: 16px;
+  height: 48px;
+  min-width: 120px;
+  background: none;
+  border: 0.5px solid #d8d8d8;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #484848;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body > section > .listings > .ListingsView > .cityList > .city > button:hover {
+  transition: 0.5s;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15) !important;
+}
+body > section > .listings > .ListingsView > .cityList > .city > .active {
+  background-color: #008489;
+  color: #fff;
+  box-shadow: 0px 7px 14px rgba(0, 132, 138, 0.15);
+}
+body > section > .listings > .ListingsView > .cityList > .left {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 48px;
+  width: 28px;
+  background: transparent;
+  margin-top: 16px;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 17%, rgba(255, 255, 255, 0) 100%);
+}
+body > section > .listings > .ListingsView > .cityList > .left > div {
+  margin: 9px 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 5000px;
+  font-size: 28px;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  transform: translateX(-20%);
+}
+body > section > .listings > .ListingsView > .cityList > .left > div > svg {
+  line-height: 28px;
+  margin: 8px 7px;
+}
+body > section > .listings > .ListingsView > .cityList > .right {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 48px;
+  width: 28px;
+  background: transparent;
+  margin-top: 16px;
+  background: linear-gradient(270deg, #ffffff 0%, #ffffff 17%, rgba(255, 255, 255, 0) 100%);
+}
+body > section > .listings > .ListingsView > .cityList > .right > div {
+  margin: 9px 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 5000px;
+  font-size: 28px;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  transform: translateX(20%);
+}
+body > section > .listings > .ListingsView > .cityList > .right > div > svg {
+  line-height: 28px;
+  margin: 8px 10px;
+}
+body > section > .listings > .ListingsView > .container {
+  font-size: 0;
+}
+body > section > .listings > .ListingsView > .container > * {
+  display: inline-block;
+  vertical-align: top;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem {
+  cursor: pointer;
+  width: 344px;
+  box-sizing: border-box;
+  padding: 0 8px 12px;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .desc {
+  font-size: 12px;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.375em;
+  font-family: Circular, PingFang-SC, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC";
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .price {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Circular, PingFang-SC, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC";
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .price > .original-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 500;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .price > .day {
+  font-size: 14px;
+  font-weight: 500;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .type {
+  font-size: 0;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .type > * {
+  display: inline-block;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .type > img {
+  object-fit: cover;
+}
+body > section > .listings > .ListingsView > .container > .ListingsItem > .type > .awesome {
+  font-size: 12px;
+  font-weight: 600;
+}
+body > section > .listings > .ListingsView > .more {
+  font-size: 17px;
+  margin-left: 8px;
+}
+body > section > .listings > .ListingsView > .more > a {
+  text-decoration: none;
+  color: #008489;
+  font-weight: 600;
+}
+body > section > .des-city > .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-left: 8px;
+}
+body > section > .des-city > .ListingsView {
+  margin-bottom: 40px;
+}
+body > section > .des-city > .ListingsView > .cityList {
+  padding: 16px 8px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  position: relative;
+}
+body > section > .des-city > .ListingsView > .cityList > .city {
+  overflow: hidden;
+}
+body > section > .des-city > .ListingsView > .cityList > .city > button {
+  margin-right: 16px;
+  height: 48px;
+  min-width: 120px;
+  background: none;
+  border: 0.5px solid #d8d8d8;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #484848;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body > section > .des-city > .ListingsView > .cityList > .city > button:hover {
+  transition: 0.5s;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15) !important;
+}
+body > section > .des-city > .ListingsView > .cityList > .city > .active {
+  background-color: #008489;
+  color: #fff;
+  box-shadow: 0px 7px 14px rgba(0, 132, 138, 0.15);
+}
+body > section > .des-city > .ListingsView > .cityList > .left {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 48px;
+  width: 28px;
+  background: transparent;
+  margin-top: 16px;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 17%, rgba(255, 255, 255, 0) 100%);
+}
+body > section > .des-city > .ListingsView > .cityList > .left > div {
+  margin: 9px 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 5000px;
+  font-size: 28px;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  transform: translateX(-20%);
+}
+body > section > .des-city > .ListingsView > .cityList > .left > div > svg {
+  line-height: 28px;
+  margin: 8px 7px;
+}
+body > section > .des-city > .ListingsView > .cityList > .right {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 48px;
+  width: 28px;
+  background: transparent;
+  margin-top: 16px;
+  background: linear-gradient(270deg, #ffffff 0%, #ffffff 17%, rgba(255, 255, 255, 0) 100%);
+}
+body > section > .des-city > .ListingsView > .cityList > .right > div {
+  margin: 9px 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 5000px;
+  font-size: 28px;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  transform: translateX(20%);
+}
+body > section > .des-city > .ListingsView > .cityList > .right > div > svg {
+  line-height: 28px;
+  margin: 8px 10px;
+}
+body > section > .des-city > .ListingsView > .container {
+  font-size: 0;
+}
+body > section > .des-city > .ListingsView > .container > * {
+  display: inline-block;
+  vertical-align: top;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem {
+  cursor: pointer;
+  width: 344px;
+  box-sizing: border-box;
+  padding: 0 8px 12px;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .desc {
+  font-size: 12px;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.375em;
+  font-family: Circular, PingFang-SC, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC";
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .price {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Circular, PingFang-SC, "Hiragino Sans GB", "微软雅黑", "Microsoft YaHei", "Heiti SC";
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .price > .original-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 500;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .price > .day {
+  font-size: 14px;
+  font-weight: 500;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .type {
+  font-size: 0;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .type > * {
+  display: inline-block;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .type > img {
+  object-fit: cover;
+}
+body > section > .des-city > .ListingsView > .container > .ListingsItem > .type > .awesome {
+  font-size: 12px;
+  font-weight: 600;
+}
+body > section > .des-city > .ListingsView > .more {
+  font-size: 17px;
+  margin-left: 8px;
+}
+body > section > .des-city > .ListingsView > .more > a {
+  text-decoration: none;
+  color: #008489;
+  font-weight: 600;
+}
+body > section > .protection {
+  margin: 8px 0;
+  margin-bottom: 40px;
+}
+body > section > .protection > .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 24px;
+  margin-left: 8px;
+}
+body > section > .protection > .info {
+  font-size: 0;
+  vertical-align: top;
+}
+body > section > .protection > .info > div {
+  font-size: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 344px;
+  padding: 0 8px;
+}
+body > section > .protection > .info > div > svg {
+  display: inline-block;
+}
+body > section > .protection > .info > div > .desc {
+  font-size: 14px;
+  display: inline-block;
+  width: calc(100% - 50px);
+  line-height: 24px;
+}
+body > section > .protection > .info > div > .desc > span {
+  font-weight: 600;
+}
+body > section > .protection > .more {
+  color: #008489;
+  font-size: 17px;
+  margin-top: 24px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+body > section .plus {
+  margin-bottom: 40px;
+}
+body > section .plus > .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-left: 8px;
+}
+body > section .plus > .desc {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 4px 0 24px 8px;
+}
+body > section .plus > .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body > section .plus > .container > img {
+  width: 1016px;
+  margin: 0 8px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+body > section .plus > .container > .warp {
+  width: 1016px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  margin: 56px 8px;
+  padding: 0 40px;
+  text-align: center;
+}
+body > section .plus > .container > .warp > .logo {
+  margin-bottom: 24px;
+}
+body > section .plus > .container > .warp > .toplus {
+  box-sizing: border-box;
+  border: solid 1px #ebebeb;
+  background-color: #ffffff;
+  border-radius: 3px;
+  height: 46px;
+  padding: 6px 39px;
+  font-size: 10px;
+}
+body > section .tourism-city {
+  margin-bottom: 40px;
+}
+body > section .tourism-city > .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+body > section .tourism-city > .list {
+  display: flex;
+}
+body > section .tourism-city > .list * {
+  color: #484848;
+  font-size: 14px;
+  font-weight: 600;
+}
+body > section .tourism-city > .list > .city {
+  flex: 1;
+  text-align: center;
+  margin: 0 8px;
+}
+body > section .tourism-city > .list > .city > .desc {
+  margin-top: 8px;
+}
+body > section .tourism-city > .list > .city > .desc > .name {
+  margin-right: 8px;
+}
+body > section .tourism-city > .list > .city > .price {
+  font-size: 12px;
+  margin-top: 8px;
+}
+body > section > .live {
+  margin-bottom: 40px;
+}
+body > section > .live > .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-left: 8px;
+}
+body > section > .live > .desc {
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 4px;
+  margin-left: 8px;
+}
+body > section > .live > .live-list {
+  display: flex;
+  width: 100%;
+}
+body > section > .live > .live-list > .item {
+  flex: 1;
+  margin: 0 8px;
+  position: relative;
+}
+body > section > .live > .live-list > .item > img {
+  object-fit: cover;
+  width: 100%;
+}
+body > section > .live > .live-list > .item > .button {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+body > section > .live > .live-list > .item > .button > .like {
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+body > section > .live > .live-list > .item > .button .online {
+  display: inline-flex;
+  height: 24px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+body > section > .live > .live-list > .item > .info > .score {
+  font-size: 14px;
+}
+body > section > .live > .live-list > .item > .info > .score > svg {
+  color: #f63e5e;
+}
+body > section > .live > .live-list > .item > .info > .score > svg > path {
+  color: #f63e5e;
+}
+body > section > .live > .live-list > .item > .info > .score > span {
+  color: #717171;
+}
+body > section > .live > .live-list > .item > .info > .name {
+  font-size: 16px;
+  overflow: hidden;
+  max-height: 40px;
+  margin-top: 7px;
+  font-weight: 400;
+  color: #222222;
+}
+body > section > .live > .live-list > .item > .info > .content-name {
+  font-weight: 400;
+  color: #222222;
+  font-size: 16px;
+  margin-top: 7px;
+}
+body > section > .live > .live-list > .item > .info > .price {
+  margin-top: 6px;
+  height: 20px;
+  line-height: 20px;
+}
+body > section > .live > .live-list > .item > .info > .price > span {
+  color: #222222;
+  font-weight: 800;
+  margin-right: 4px;
+}
+body > section > .live > .more {
+  color: #008489;
+  font-size: 17px;
+  margin-top: 24px;
+  font-weight: 600;
+  margin-left: 8px;
+}
